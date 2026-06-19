@@ -1,5 +1,5 @@
-# Deploy docs/ to GitHub Pages via GitHub Actions (no branch/folder source required).
-# One-time setup: Settings → Pages → Build and deployment → Source → GitHub Actions
+# Deploy Avalonia WASM gallery to GitHub Pages via GitHub Actions.
+# One-time setup: Settings → Pages → Source → GitHub Actions
 name: Deploy GitHub Pages
 
 on:
@@ -23,19 +23,27 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Install wasm-tools workload
+        run: dotnet workload install wasm-tools
+
+      - name: Publish Avalonia WASM gallery
+        run: dotnet publish samples/UnityTheme.Gallery.Browser/UnityTheme.Gallery.Browser.csproj -c Release
+
+      - name: Add .nojekyll for _framework assets
+        run: touch samples/UnityTheme.Gallery.Browser/bin/Release/net10.0-browser/publish/wwwroot/.nojekyll
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
-
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./docs
-          destination: ./_site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site
+          path: samples/UnityTheme.Gallery.Browser/bin/Release/net10.0-browser/publish/wwwroot
 
   deploy:
     needs: build

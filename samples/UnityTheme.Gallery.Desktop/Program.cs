@@ -1,7 +1,7 @@
 using Avalonia;
 using System;
 
-namespace UnityTheme.Gallery;
+namespace UnityTheme.Gallery.Desktop;
 
 internal static class Program
 {
@@ -10,7 +10,7 @@ internal static class Program
         BuildAvaloniaApp().StartWithClassicDesktopLifetime(args);
 
     public static AppBuilder BuildAvaloniaApp()
-        => AppBuilder.Configure<App>()
+        => AppBuilder.Configure<UnityTheme.Gallery.App>()
             .UsePlatformDetect()
             .WithInterFont()
             .LogToTrace();

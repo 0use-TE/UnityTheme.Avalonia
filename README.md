@@ -13,15 +13,22 @@ Standalone [Avalonia UI](https://avaloniaui.net/) theme inspired by the **Unity 
 
 ## Preview
 
-Run the gallery to explore every styled control and switch between dark / light themes:
+**Live demo (Avalonia WASM):** [https://0use-te.github.io/UnityTheme.Avalonia/](https://0use-te.github.io/UnityTheme.Avalonia/)
+
+### Desktop gallery
 
 ```bash
-git clone https://github.com/0use-TE/UnityTheme.Avalonia.git
-cd UnityTheme.Avalonia
-dotnet run --project samples/UnityTheme.Gallery
+dotnet run --project samples/UnityTheme.Gallery.Desktop
 ```
 
-> Repository: [github.com/0use-TE/UnityTheme.Avalonia](https://github.com/0use-TE/UnityTheme.Avalonia)
+### Browser / WASM (local)
+
+Requires [.NET 10 SDK](https://dotnet.microsoft.com/download) and the wasm-tools workload:
+
+```bash
+dotnet workload install wasm-tools
+dotnet run --project samples/UnityTheme.Gallery.Browser
+```
 
 ## Quick start
 
@@ -68,7 +75,9 @@ UnityTheme.Avalonia/
 │   ├── Accents/Base.xaml        Colors, tokens, light/dark palettes
 │   ├── Controls/                Per-control themes (~74 templates)
 │   └── Strings/                 Invariant strings for pickers/menus
-├── samples/UnityTheme.Gallery/  Interactive component gallery
+├── samples/UnityTheme.Gallery/          Shared gallery UI (library)
+├── samples/UnityTheme.Gallery.Desktop/  Desktop WinExe
+├── samples/UnityTheme.Gallery.Browser/    WASM gallery (GitHub Pages)
 ├── Directory.Packages.props     Central package versions (Avalonia 12.0.4)
 └── UnityTheme.Avalonia.slnx
 ```
@@ -103,6 +112,7 @@ Requirements: [.NET 8 SDK](https://dotnet.microsoft.com/download)
 
 ```bash
 dotnet build UnityTheme.Avalonia.slnx
+dotnet run --project samples/UnityTheme.Gallery.Desktop
 ```
 
 ## Gallery pages
@@ -118,17 +128,16 @@ dotnet build UnityTheme.Avalonia.slnx
 | Layout | Tabs, splitters, date/time pickers |
 | Inspector | Expander-based property panel demo |
 
-## GitHub Pages
+## GitHub Pages (Avalonia WASM)
 
-Documentation is deployed automatically with [GitHub Actions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow) on every push to `main`.
+The gallery runs in the browser as **Avalonia WebAssembly**. On every push to `main`, GitHub Actions builds and publishes the WASM app.
 
-**One-time setup** (no branch/folder selection):
+**One-time setup:**
 
-1. Open [Settings → Pages](https://github.com/0use-TE/UnityTheme.Avalonia/settings/pages)
-2. Under **Build and deployment → Source**, choose **GitHub Actions**
-3. Push to `main` — the `Deploy GitHub Pages` workflow builds and publishes `docs/`
+1. [Settings → Pages](https://github.com/0use-TE/UnityTheme.Avalonia/settings/pages) → **Source: GitHub Actions**
+2. Wait for the **Deploy GitHub Pages** workflow to finish
 
-Site URL: **https://0use-te.github.io/UnityTheme.Avalonia/**
+No branch or `/docs` folder selection — the workflow uploads the published `wwwroot` from `UnityTheme.Gallery.Browser`.
 
 ## Local Avalonia source (optional)
 
