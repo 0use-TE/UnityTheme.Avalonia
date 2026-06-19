@@ -7,11 +7,8 @@
   <meta name="description" content="Unity Editor-inspired Avalonia UI theme gallery">
   <script>
     (function () {
-      var href = '/';
-      if (location.hostname.endsWith('github.io')) {
-        var segment = location.pathname.split('/').filter(Boolean)[0];
-        if (segment) href = '/' + segment + '/';
-      }
+      var href = new URL('.', location.href).pathname;
+      if (!href.endsWith('/')) href += '/';
       var base = document.createElement('base');
       base.href = href;
       document.head.appendChild(base);
