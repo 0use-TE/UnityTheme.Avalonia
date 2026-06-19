@@ -23,11 +23,15 @@ dotnet run --project samples/UnityTheme.Gallery.Browser
 
 ## Use in your app
 
-The theme targets `net8.0`. Reference it from a **.NET 8 or .NET 10** Avalonia app — both work fine.
+### 1. Install
 
 ```bash
-dotnet add YourApp.csproj reference path/to/src/UnityTheme.Avalonia/UnityTheme.Avalonia.csproj
+dotnet add package UnityTheme.Avalonia
 ```
+
+### 2. Apply theme
+
+`App.axaml`:
 
 ```xml
 <Application xmlns="https://github.com/avaloniaui"
@@ -39,6 +43,20 @@ dotnet add YourApp.csproj reference path/to/src/UnityTheme.Avalonia/UnityTheme.A
     <unity:UnityTheme />
   </Application.Styles>
 </Application>
+```
+
+Switch light/dark at runtime:
+
+```csharp
+Application.Current!.RequestedThemeVariant = ThemeVariant.Light;
+// or ThemeVariant.Dark
+```
+
+### 3. Use theme brushes (optional)
+
+```xml
+<Border Background="{DynamicResource UnityPanelBackgroundBrush}"
+        BorderBrush="{DynamicResource UnityBorderBrush}" />
 ```
 
 Handy brushes:
@@ -76,6 +94,14 @@ Browser sample needs .NET 10 because Avalonia 12's Browser package does. The the
 ```bash
 dotnet build UnityTheme.Avalonia.slnx
 ```
+
+## Pack (NuGet)
+
+```bash
+dotnet pack src/UnityTheme.Avalonia/UnityTheme.Avalonia.csproj -c Release -o package
+```
+
+Output: `package/UnityTheme.Avalonia.1.0.0.nupkg`
 
 ## License
 

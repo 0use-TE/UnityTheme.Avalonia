@@ -10,6 +10,7 @@
 [Rr]elease/
 artifacts/
 publish/
+package/
 
 # IDE
 .vs/

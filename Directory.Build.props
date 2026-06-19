@@ -3,8 +3,8 @@
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Authors>UnityTheme.Avalonia</Authors>
-    <Copyright>Copyright © UnityTheme.Avalonia</Copyright>
+    <Authors>0use-TE</Authors>
+    <Copyright>Copyright © 0use-TE</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 </Project>
