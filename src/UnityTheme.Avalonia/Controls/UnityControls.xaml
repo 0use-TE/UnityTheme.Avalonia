@@ -1,0 +1,85 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:ClassModifier="internal">
+
+  <Styles.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/AdornerLayer.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/Button.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/RadioButton.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/Expander.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/RepeatButton.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/ToggleSwitch.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/ButtonSpinner.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/ToggleButton.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/DropDownButton.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/PathIcon.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/CheckBox.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/ToolTip.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/Label.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/ComboBoxItem.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/ComboBox.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/Window.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/Carousel.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/WindowDrawnDecorations.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/TextBox.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/AutoCompleteBox.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/DataValidationErrors.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/FlyoutPresenter.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/MenuFlyoutPresenter.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/GroupBox.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/GridSplitter.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/HyperlinkButton.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/ItemsControl.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/ListBoxItem.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/ListBox.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/ScrollBar.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/ScrollViewer.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/TabStrip.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/TabStripItem.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/TabControl.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/TabItem.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/PipsPager.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/PopupRoot.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/OverlayPopupHost.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/WindowNotificationManager.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/EmbeddableControlRoot.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/TransitioningContentControl.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/TreeView.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/TreeViewItem.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/ProgressBar.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/Separator.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/Menu.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/MenuItem.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/ContextMenu.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/CalendarButton.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/CalendarDayButton.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/CalendarItem.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/Calendar.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/CalendarDatePicker.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/Slider.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/NotificationCard.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/NumericUpDown.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/DateTimePickerShared.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/DatePicker.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/TimePicker.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/SplitView.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/ManagedFileChooser.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/SplitButton.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/SelectableTextBlock.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/RefreshContainer.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/RefreshVisualizer.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/ThemeVariantScope.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/HeaderedContentControl.xaml"/>
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/TextSelectionHandle.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/CommandBar.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/ContentPage.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/CarouselPage.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/DrawerPage.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/NavigationPage.xaml" />
+        <MergeResourceInclude Source="avares://UnityTheme.Avalonia/Controls/TabbedPage.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Styles.Resources>
+</Styles>

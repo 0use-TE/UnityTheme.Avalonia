@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>UnityTheme.Avalonia</RootNamespace>
+    <AssemblyName>UnityTheme.Avalonia</AssemblyName>
+    <Description>Standalone Unity Editor inspired compact theme for Avalonia UI</Description>
+    <PackageTags>avalonia;theme;unity;dark;compact</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Include="**/*.xaml" />
+  </ItemGroup>
+</Project>
