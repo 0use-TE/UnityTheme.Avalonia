@@ -7,7 +7,7 @@
     <!-- NuGet -->
     <IsPackable>true</IsPackable>
     <PackageId>UnityTheme.Avalonia</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.2</Version>
     <Title>UnityTheme.Avalonia</Title>
     <Description>Unity Editor inspired compact theme for Avalonia UI. Dark-first, high density, no FluentTheme dependency. Avalonia 12+.</Description>
     <PackageTags>avalonia;avaloniaui;theme;unity;dark;compact;ui;editor</PackageTags>
