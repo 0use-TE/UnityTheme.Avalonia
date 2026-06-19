@@ -18,7 +18,7 @@ Unity Editor–inspired theme for [Avalonia UI](https://avaloniaui.net/).
 ## Get started
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/UnityTheme.Avalonia.git
+git clone https://github.com/0use-TE/UnityTheme.Avalonia.git
 cd UnityTheme.Avalonia
 dotnet run --project samples/UnityTheme.Gallery
 ```
@@ -35,8 +35,8 @@ Apply in your app:
 
 ## Documentation
 
-Full documentation lives in the repository [README](https://github.com/YOUR_USERNAME/UnityTheme.Avalonia).
+Full documentation lives in the repository [README](https://github.com/0use-TE/UnityTheme.Avalonia).
 
 ## License
 
-[MIT License](https://github.com/YOUR_USERNAME/UnityTheme.Avalonia/blob/main/LICENSE)
+[MIT License](https://github.com/0use-TE/UnityTheme.Avalonia/blob/main/LICENSE)

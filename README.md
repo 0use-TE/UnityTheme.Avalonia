@@ -16,12 +16,12 @@ Standalone [Avalonia UI](https://avaloniaui.net/) theme inspired by the **Unity 
 Run the gallery to explore every styled control and switch between dark / light themes:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/UnityTheme.Avalonia.git
+git clone https://github.com/0use-TE/UnityTheme.Avalonia.git
 cd UnityTheme.Avalonia
 dotnet run --project samples/UnityTheme.Gallery
 ```
 
-> Replace `YOUR_USERNAME` with your GitHub username after publishing the repository.
+> Repository: [github.com/0use-TE/UnityTheme.Avalonia](https://github.com/0use-TE/UnityTheme.Avalonia)
 
 ## Quick start
 
