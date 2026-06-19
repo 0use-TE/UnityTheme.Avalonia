@@ -3,7 +3,6 @@
     <Project Path="src/UnityTheme.Avalonia/UnityTheme.Avalonia.csproj" />
   </Folder>
   <Folder Name="/samples/">
-    <Project Path="samples/UnityTheme.Demo/UnityTheme.Demo.csproj" />
     <Project Path="samples/UnityTheme.Gallery/UnityTheme.Gallery.csproj" />
     <Project Path="samples/UnityTheme.Gallery.Desktop/UnityTheme.Gallery.Desktop.csproj" />
     <Project Path="samples/UnityTheme.Gallery.Browser/UnityTheme.Gallery.Browser.csproj" />
