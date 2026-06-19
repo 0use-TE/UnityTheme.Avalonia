@@ -1,0 +1,64 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="UnityTheme.Gallery.Views.OverviewPage">
+  <StackPanel Spacing="12">
+    <StackPanel Spacing="8">
+      <Label Content="Quick preview" />
+      <StackPanel Orientation="Horizontal" Spacing="6">
+        <Button Content="Default" />
+        <Button Classes="accent" Content="Accent" />
+        <Button Content="Disabled" IsEnabled="False" />
+      </StackPanel>
+      <TextBox Width="280" PlaceholderText="Search assets..." />
+      <ComboBox Width="200" PlaceholderText="Layer" SelectedIndex="0">
+        <ComboBoxItem Content="Default" />
+        <ComboBoxItem Content="UI" />
+        <ComboBoxItem Content="Effects" />
+      </ComboBox>
+      <ProgressBar Minimum="0" Maximum="100" ShowProgressText="True" Value="65" />
+    </StackPanel>
+
+    <StackPanel Spacing="8">
+      <Label Content="Adapted control catalog" />
+      <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto"
+            ColumnSpacing="12" RowSpacing="8">
+        <StackPanel Grid.Row="0" Grid.Column="0" Spacing="2">
+          <Label Content="Actions" />
+          <TextBlock Text="Button · ToggleButton · SplitButton · DropDownButton" />
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="1" Spacing="2">
+          <Label Content="Selection" />
+          <TextBlock Text="CheckBox · RadioButton · ToggleSwitch" />
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0" Spacing="2">
+          <Label Content="Text &amp; Input" />
+          <TextBlock Text="Label · TextBox · ComboBox · ComboBoxItem · NumericUpDown · ButtonSpinner · AutoCompleteBox" />
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" Spacing="2">
+          <Label Content="Value" />
+          <TextBlock Text="Slider · ProgressBar" />
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="0" Spacing="2">
+          <Label Content="Lists" />
+          <TextBlock Text="ListBox · ListBoxItem · TreeView · TreeViewItem" />
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="1" Spacing="2">
+          <Label Content="Menus" />
+          <TextBlock Text="Menu · MenuItem · ContextMenu" />
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="0" Spacing="2">
+          <Label Content="Layout" />
+          <TextBlock Text="TabControl · TabItem · Expander · GroupBox · Separator · GridSplitter · SplitView" />
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="1" Spacing="2">
+          <Label Content="Date &amp; Time" />
+          <TextBlock Text="DatePicker · TimePicker" />
+        </StackPanel>
+        <StackPanel Grid.Row="4" Grid.Column="0" Spacing="2">
+          <Label Content="Chrome" />
+          <TextBlock Text="ScrollViewer · ScrollBar" />
+        </StackPanel>
+      </Grid>
+    </StackPanel>
+  </StackPanel>
+</UserControl>

@@ -1,70 +1,50 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:views="using:UnityTheme.Gallery.Views"
              x:Class="UnityTheme.Gallery.GalleryShell">
   <DockPanel>
-    <Border DockPanel.Dock="Top"
-            Background="{DynamicResource UnityToolbarBackgroundBrush}"
-            BorderBrush="{DynamicResource UnityBorderBrush}"
-            BorderThickness="0,0,0,1"
-            Padding="8,4">
-      <Grid ColumnDefinitions="*,Auto">
-        <StackPanel Orientation="Horizontal" Spacing="8">
-          <TextBlock Text="Unity Theme Gallery"
-                     VerticalAlignment="Center"
-                     FontSize="13"
-                     FontWeight="SemiBold"
-                     Foreground="{DynamicResource ThemeForegroundBrush}" />
-          <TextBlock Text="Compact · Professional · High Density"
-                     VerticalAlignment="Center"
-                     Foreground="{DynamicResource ThemeForegroundLowBrush}" />
-        </StackPanel>
-        <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="2">
-          <ToggleButton x:Name="DarkThemeButton"
-                        Content="Dark"
-                        IsChecked="True"
-                        Click="OnThemeDarkClick" />
-          <ToggleButton x:Name="LightThemeButton"
-                        Content="Light"
-                        Click="OnThemeLightClick" />
-        </StackPanel>
-      </Grid>
-    </Border>
+    <StackPanel DockPanel.Dock="Top"
+                Margin="8,4"
+                Orientation="Horizontal"
+                Spacing="8">
+      <Label Content="Unity Theme Gallery" />
+      <ToggleButton x:Name="DarkThemeButton"
+                    Content="Dark"
+                    IsChecked="True"
+                    Click="OnThemeDarkClick" />
+      <ToggleButton x:Name="LightThemeButton"
+                    Content="Light"
+                    Click="OnThemeLightClick" />
+    </StackPanel>
 
-    <Grid ColumnDefinitions="220,*">
-      <Border Grid.Column="0"
-              Background="{DynamicResource UnityPanelBackgroundBrush}"
-              BorderBrush="{DynamicResource UnityBorderBrush}"
-              BorderThickness="0,0,1,0">
-        <DockPanel>
-          <TextBlock DockPanel.Dock="Top"
-                     Text="COMPONENTS"
-                     Margin="12,10,12,6"
-                     FontSize="10"
-                     Foreground="{DynamicResource ThemeForegroundLowBrush}"
-                     LetterSpacing="1" />
-          <ListBox x:Name="NavigationList"
-                   SelectionChanged="OnNavigationSelectionChanged"
-                   Background="Transparent"
-                   BorderThickness="0"
-                   Padding="4">
-            <ListBoxItem Tag="Overview" Content="Overview" />
-            <ListBoxItem Tag="AllControls" Content="All Controls" />
-            <ListBoxItem Tag="Buttons" Content="Buttons" />
-            <ListBoxItem Tag="Inputs" Content="Inputs" />
-            <ListBoxItem Tag="Selection" Content="Selection" />
-            <ListBoxItem Tag="Lists" Content="Lists &amp; Trees" />
-            <ListBoxItem Tag="Menus" Content="Menus" />
-            <ListBoxItem Tag="Layout" Content="Layout" />
-            <ListBoxItem Tag="Inspector" Content="Inspector Panel" />
-          </ListBox>
-        </DockPanel>
-      </Border>
-
-      <Border Grid.Column="1"
-              Background="{DynamicResource ThemeBackgroundBrush}"
-              Padding="16">
-        <ContentControl x:Name="PageHost" />
-      </Border>
-    </Grid>
+    <TabControl TabStripPlacement="Left" SelectedIndex="1">
+      <TabItem Header="Overview">
+        <views:OverviewPage />
+      </TabItem>
+      <TabItem Header="All Controls">
+        <views:AllControlsPage />
+      </TabItem>
+      <TabItem Header="Buttons">
+        <views:ButtonsPage />
+      </TabItem>
+      <TabItem Header="Inputs">
+        <views:InputsPage />
+      </TabItem>
+      <TabItem Header="Selection">
+        <views:SelectionPage />
+      </TabItem>
+      <TabItem Header="Lists">
+        <views:ListsPage />
+      </TabItem>
+      <TabItem Header="Menus">
+        <views:MenusPage />
+      </TabItem>
+      <TabItem Header="Layout">
+        <views:LayoutPage />
+      </TabItem>
+      <TabItem Header="Inspector">
+        <views:InspectorPage />
+      </TabItem>
+    </TabControl>
   </DockPanel>
 </UserControl>

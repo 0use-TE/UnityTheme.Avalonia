@@ -1,0 +1,217 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:views="using:UnityTheme.Gallery.Views"
+             x:Class="UnityTheme.Gallery.Views.AllControlsPage">
+  <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+    <StackPanel Spacing="12">
+      <StackPanel Spacing="6">
+        <Label Content="Button" />
+        <StackPanel Orientation="Horizontal" Spacing="6">
+          <Button Content="Default" />
+          <Button Classes="accent" Content="Accent" />
+          <Button Content="Disabled" IsEnabled="False" />
+        </StackPanel>
+      </StackPanel>
+
+      <StackPanel Spacing="6">
+        <Label Content="ToggleButton" />
+        <StackPanel Orientation="Horizontal" Spacing="6">
+          <ToggleButton Content="Off" />
+          <ToggleButton Content="On" IsChecked="True" />
+        </StackPanel>
+      </StackPanel>
+
+      <StackPanel Spacing="6">
+        <Label Content="SplitButton / DropDownButton" />
+        <StackPanel Orientation="Horizontal" Spacing="6">
+          <SplitButton Content="Build" />
+          <DropDownButton Content="Layers" />
+        </StackPanel>
+      </StackPanel>
+
+      <StackPanel Spacing="4">
+        <Label Content="CheckBox" />
+        <CheckBox Content="Enabled" IsChecked="True" />
+        <CheckBox Content="Unchecked" />
+        <CheckBox Content="Disabled" IsEnabled="False" />
+      </StackPanel>
+
+      <StackPanel Spacing="4">
+        <Label Content="RadioButton" />
+        <RadioButton GroupName="all" Content="Option A" IsChecked="True" />
+        <RadioButton GroupName="all" Content="Option B" />
+      </StackPanel>
+
+      <StackPanel Spacing="6">
+        <Label Content="ToggleSwitch" />
+        <StackPanel Orientation="Horizontal" Spacing="6">
+          <Label VerticalAlignment="Center" Content="HDR" />
+          <ToggleSwitch IsChecked="True" OffContent="" OnContent="" />
+        </StackPanel>
+      </StackPanel>
+
+      <StackPanel Spacing="6">
+        <Label Content="Label" />
+        <Label Content="Inspector field label" />
+      </StackPanel>
+
+      <StackPanel Spacing="4">
+        <Label Content="TextBox" />
+        <TextBox MaxWidth="280" PlaceholderText="Placeholder" />
+        <TextBox MaxWidth="280" Text="With value" />
+        <TextBox MaxWidth="280" Text="Read only" IsReadOnly="True" />
+      </StackPanel>
+
+      <StackPanel Spacing="6">
+        <Label Content="ComboBox / ComboBoxItem" />
+        <ComboBox MaxWidth="280" PlaceholderText="Select shader" SelectedIndex="0">
+          <ComboBoxItem Content="Standard" />
+          <ComboBoxItem Content="Unlit/Color" />
+          <ComboBoxItem Content="UI/Default" />
+        </ComboBox>
+      </StackPanel>
+
+      <StackPanel Spacing="6">
+        <Label Content="NumericUpDown / ButtonSpinner" />
+        <NumericUpDown MaxWidth="280" Increment="0.1" FormatString="F2" Value="1.5" />
+      </StackPanel>
+
+      <StackPanel Spacing="6">
+        <Label Content="AutoCompleteBox" />
+        <AutoCompleteBox MaxWidth="280"
+                         PlaceholderText="Search components"
+                         ItemsSource="{x:Static views:GallerySampleData.AutoCompleteComponents}" />
+      </StackPanel>
+
+      <StackPanel Spacing="6">
+        <Label Content="Slider" />
+        <Slider MaxWidth="280" Minimum="0" Maximum="100" Value="60" />
+      </StackPanel>
+
+      <StackPanel Spacing="6">
+        <Label Content="ProgressBar" />
+        <ProgressBar MaxWidth="280" Minimum="0" Maximum="100" ShowProgressText="True" Value="45" />
+      </StackPanel>
+
+      <StackPanel Spacing="6">
+        <Label Content="ListBox / ListBoxItem" />
+        <ListBox MaxWidth="280" Height="100" SelectedIndex="1">
+          <ListBoxItem Content="Main Camera" />
+          <ListBoxItem Content="Player" />
+          <ListBoxItem Content="Environment" />
+        </ListBox>
+      </StackPanel>
+
+      <StackPanel Spacing="6">
+        <Label Content="TreeView / TreeViewItem" />
+        <TreeView MaxWidth="280" Height="120">
+          <TreeViewItem Header="Assets" IsExpanded="True">
+            <TreeViewItem Header="Scenes" />
+            <TreeViewItem Header="Scripts" />
+          </TreeViewItem>
+        </TreeView>
+      </StackPanel>
+
+      <StackPanel Spacing="6">
+        <Label Content="Menu / MenuItem" />
+        <Menu>
+          <MenuItem Header="File">
+            <MenuItem Header="New Scene" HotKey="Ctrl+N" />
+            <MenuItem Header="Open..." HotKey="Ctrl+O" />
+            <MenuItem Header="-" />
+            <MenuItem Header="Save" HotKey="Ctrl+S" />
+          </MenuItem>
+          <MenuItem Header="Edit">
+            <MenuItem Header="Undo" HotKey="Ctrl+Z" />
+          </MenuItem>
+        </Menu>
+      </StackPanel>
+
+      <StackPanel Spacing="6">
+        <Label Content="TabControl / TabItem" />
+        <TabControl MaxWidth="360" Height="100">
+          <TabItem Header="Scene">
+            <TextBlock Margin="8" VerticalAlignment="Center" Text="Scene content" />
+          </TabItem>
+          <TabItem Header="Game">
+            <TextBlock Margin="8" VerticalAlignment="Center" Text="Game content" />
+          </TabItem>
+          <TabItem Header="Console" />
+        </TabControl>
+      </StackPanel>
+
+      <StackPanel Spacing="6">
+        <Label Content="Expander" />
+        <Expander MaxWidth="320" Header="Transform" IsExpanded="True">
+          <TextBox Margin="0,4,0,0" Text="0, 0, 0" />
+        </Expander>
+      </StackPanel>
+
+      <StackPanel Spacing="6">
+        <Label Content="GroupBox" />
+        <GroupBox MaxWidth="320" Header="Mesh Renderer">
+          <CheckBox Margin="0,4,0,0" Content="Cast Shadows" IsChecked="True" />
+        </GroupBox>
+      </StackPanel>
+
+      <StackPanel Spacing="6">
+        <Label Content="Separator" />
+        <Separator MaxWidth="320" />
+      </StackPanel>
+
+      <StackPanel Spacing="6">
+        <Label Content="GridSplitter" />
+        <Grid MaxWidth="360" Height="72" ColumnDefinitions="*,Auto,*">
+          <TextBlock Grid.Column="0" Margin="6" VerticalAlignment="Center" Text="Left" />
+          <GridSplitter Grid.Column="1" Width="4" />
+          <TextBlock Grid.Column="2" Margin="6" VerticalAlignment="Center" Text="Right" />
+        </Grid>
+      </StackPanel>
+
+      <StackPanel Spacing="6">
+        <Label Content="SplitView" />
+        <SplitView MaxWidth="360" Height="72"
+                   DisplayMode="Inline"
+                   IsPaneOpen="True"
+                   OpenPaneLength="100">
+          <SplitView.Pane>
+            <TextBlock Margin="6" VerticalAlignment="Top" Text="Pane" />
+          </SplitView.Pane>
+          <SplitView.Content>
+            <TextBlock Margin="6" VerticalAlignment="Top" Text="Content" />
+          </SplitView.Content>
+        </SplitView>
+      </StackPanel>
+
+      <StackPanel Spacing="6">
+        <Label Content="DatePicker" />
+        <DatePicker MaxWidth="320" />
+      </StackPanel>
+
+      <StackPanel Spacing="6">
+        <Label Content="TimePicker" />
+        <TimePicker MaxWidth="320" />
+      </StackPanel>
+
+      <StackPanel Spacing="6">
+        <Label Content="ScrollViewer / ScrollBar" />
+        <ScrollViewer MaxWidth="280" Height="80">
+          <StackPanel Spacing="2">
+            <TextBlock Text="Scroll item 1" />
+            <TextBlock Text="Scroll item 2" />
+            <TextBlock Text="Scroll item 3" />
+            <TextBlock Text="Scroll item 4" />
+            <TextBlock Text="Scroll item 5" />
+            <TextBlock Text="Scroll item 6" />
+            <TextBlock Text="Scroll item 7" />
+            <TextBlock Text="Scroll item 8" />
+            <TextBlock Text="Scroll item 9" />
+            <TextBlock Text="Scroll item 10" />
+            <TextBlock Text="Scroll item 11" />
+            <TextBlock Text="Scroll item 12" />
+          </StackPanel>
+        </ScrollViewer>
+      </StackPanel>
+    </StackPanel>
+  </ScrollViewer>
+</UserControl>

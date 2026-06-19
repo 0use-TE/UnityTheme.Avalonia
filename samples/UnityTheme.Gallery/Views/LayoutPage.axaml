@@ -1,0 +1,88 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="UnityTheme.Gallery.Views.LayoutPage">
+  <StackPanel Spacing="12">
+    <StackPanel Spacing="6">
+      <Label Content="TabControl" />
+      <TabControl Height="160">
+        <TabItem Header="Scene">
+          <TextBlock Margin="8" VerticalAlignment="Center" Text="Scene View" />
+        </TabItem>
+        <TabItem Header="Game">
+          <TextBlock Margin="8" VerticalAlignment="Center" Text="Game View" />
+        </TabItem>
+        <TabItem Header="Asset Store" />
+      </TabControl>
+    </StackPanel>
+
+    <StackPanel Spacing="6">
+      <Label Content="GridSplitter" />
+      <Grid Height="120" ColumnDefinitions="*,Auto,*">
+        <TextBlock Grid.Column="0" Margin="8" VerticalAlignment="Top" Text="Hierarchy" />
+        <GridSplitter Grid.Column="1" Width="4" HorizontalAlignment="Stretch" />
+        <TextBlock Grid.Column="2" Margin="8" VerticalAlignment="Top" Text="Inspector" />
+      </Grid>
+    </StackPanel>
+
+    <StackPanel Spacing="6">
+      <Label Content="SplitView" />
+      <SplitView Height="120"
+                 DisplayMode="Inline"
+                 IsPaneOpen="True"
+                 OpenPaneLength="120">
+        <SplitView.Pane>
+          <TextBlock Margin="8" VerticalAlignment="Top" Text="Project" />
+        </SplitView.Pane>
+        <SplitView.Content>
+          <TextBlock Margin="8" VerticalAlignment="Top" Text="Assets" />
+        </SplitView.Content>
+      </SplitView>
+    </StackPanel>
+
+    <StackPanel Spacing="8" MaxWidth="320">
+      <Label Content="DatePicker / TimePicker" />
+      <DatePicker />
+      <TimePicker />
+    </StackPanel>
+
+    <StackPanel Spacing="6">
+      <Label Content="GroupBox" />
+      <GroupBox MaxWidth="320" Header="Physics">
+        <StackPanel Margin="0,4,0,0" Spacing="4">
+          <CheckBox Content="Use Gravity" IsChecked="True" />
+          <CheckBox Content="Is Kinematic" />
+        </StackPanel>
+      </GroupBox>
+    </StackPanel>
+
+    <StackPanel Spacing="6">
+      <Label Content="ScrollViewer / ScrollBar" />
+      <ScrollViewer MaxWidth="320" Height="72">
+        <StackPanel Spacing="2">
+          <TextBlock Text="Log entry 1" />
+          <TextBlock Text="Log entry 2" />
+          <TextBlock Text="Log entry 3" />
+          <TextBlock Text="Log entry 4" />
+          <TextBlock Text="Log entry 5" />
+          <TextBlock Text="Log entry 6" />
+          <TextBlock Text="Log entry 7" />
+          <TextBlock Text="Log entry 8" />
+          <TextBlock Text="Log entry 9" />
+          <TextBlock Text="Log entry 10" />
+        </StackPanel>
+      </ScrollViewer>
+    </StackPanel>
+
+    <Separator />
+
+    <StackPanel Spacing="6">
+      <Label Content="Expander" />
+      <Expander Header="Rendering" IsExpanded="True">
+        <StackPanel Spacing="4">
+          <CheckBox Content="Occlusion Culling" IsChecked="True" />
+          <CheckBox Content="Fog" />
+        </StackPanel>
+      </Expander>
+    </StackPanel>
+  </StackPanel>
+</UserControl>

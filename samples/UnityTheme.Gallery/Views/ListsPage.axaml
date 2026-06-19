@@ -1,0 +1,30 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="UnityTheme.Gallery.Views.ListsPage">
+  <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+    <StackPanel Grid.Column="0" Spacing="6">
+      <Label Content="ListBox" />
+      <ListBox Height="140" SelectedIndex="2">
+        <ListBoxItem Content="Main Camera" />
+        <ListBoxItem Content="Directional Light" />
+        <ListBoxItem Content="Player" />
+        <ListBoxItem Content="Environment" />
+        <ListBoxItem Content="Canvas (UI)" />
+      </ListBox>
+    </StackPanel>
+
+    <StackPanel Grid.Column="1" Spacing="6">
+      <Label Content="TreeView" />
+      <TreeView Height="160">
+        <TreeViewItem Header="Assets" IsExpanded="True">
+          <TreeViewItem Header="Scenes" />
+          <TreeViewItem Header="Scripts" IsExpanded="True">
+            <TreeViewItem Header="PlayerController.cs" />
+            <TreeViewItem Header="GameManager.cs" />
+          </TreeViewItem>
+          <TreeViewItem Header="Prefabs" />
+        </TreeViewItem>
+      </TreeView>
+    </StackPanel>
+  </Grid>
+</UserControl>

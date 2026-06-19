@@ -1,0 +1,43 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="UnityTheme.Gallery.Views.MenusPage">
+  <StackPanel Spacing="12">
+    <StackPanel Spacing="6">
+      <Label Content="Menu / MenuItem" />
+      <Menu>
+        <MenuItem Header="File">
+          <MenuItem Header="New Scene" HotKey="Ctrl+N" />
+          <MenuItem Header="Open..." HotKey="Ctrl+O" />
+          <MenuItem Header="-" />
+          <MenuItem Header="Recent Scenes">
+            <MenuItem Header="SampleScene.unity" />
+            <MenuItem Header="MainMenu.unity" />
+          </MenuItem>
+          <MenuItem Header="Save" HotKey="Ctrl+S" />
+        </MenuItem>
+        <MenuItem Header="Edit">
+          <MenuItem Header="Undo" HotKey="Ctrl+Z" />
+          <MenuItem Header="Redo" HotKey="Ctrl+Y" />
+        </MenuItem>
+        <MenuItem Header="Assets">
+          <MenuItem Header="Create" IsEnabled="False" />
+          <MenuItem Header="Show in Explorer" />
+        </MenuItem>
+      </Menu>
+    </StackPanel>
+
+    <StackPanel Spacing="6">
+      <Label Content="ContextMenu" />
+      <Button HorizontalAlignment="Left" Content="Right-click for context menu">
+        <Button.ContextMenu>
+          <ContextMenu>
+            <MenuItem Header="Copy" />
+            <MenuItem Header="Paste" />
+            <MenuItem Header="-" />
+            <MenuItem Header="Delete" />
+          </ContextMenu>
+        </Button.ContextMenu>
+      </Button>
+    </StackPanel>
+  </StackPanel>
+</UserControl>

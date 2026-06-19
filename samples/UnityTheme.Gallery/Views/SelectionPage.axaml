@@ -1,0 +1,32 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="UnityTheme.Gallery.Views.SelectionPage">
+  <StackPanel Spacing="12">
+    <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+      <StackPanel Grid.Column="0" Spacing="2">
+        <Label Content="CheckBox" />
+        <CheckBox Content="Static" IsChecked="True" />
+        <CheckBox Content="Auto Sync Transforms" />
+        <CheckBox Content="Disabled" IsEnabled="False" />
+      </StackPanel>
+
+      <StackPanel Grid.Column="1" Spacing="2">
+        <Label Content="RadioButton" />
+        <RadioButton GroupName="cam" Content="Perspective" IsChecked="True" />
+        <RadioButton GroupName="cam" Content="Orthographic" />
+      </StackPanel>
+    </Grid>
+
+    <StackPanel Spacing="2">
+      <Label Content="ToggleSwitch" />
+      <StackPanel Orientation="Horizontal" Spacing="6">
+        <Label VerticalAlignment="Center" Content="Post Processing" />
+        <ToggleSwitch IsChecked="True" OffContent="" OnContent="" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal" Spacing="6">
+        <Label VerticalAlignment="Center" Content="HDR" />
+        <ToggleSwitch OffContent="" OnContent="" />
+      </StackPanel>
+    </StackPanel>
+  </StackPanel>
+</UserControl>

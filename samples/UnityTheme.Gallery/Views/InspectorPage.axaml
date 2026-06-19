@@ -1,0 +1,38 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="UnityTheme.Gallery.Views.InspectorPage">
+  <StackPanel Spacing="0" MaxWidth="420">
+    <Expander Header="Transform" IsExpanded="True">
+      <Grid ColumnDefinitions="120,*" RowDefinitions="Auto,Auto,Auto">
+        <Label Grid.Row="0" Grid.Column="0" Margin="0,2" Content="Position" VerticalAlignment="Center" />
+        <TextBox Grid.Row="0" Grid.Column="1" Margin="0,1" Text="0, 1.5, 0" />
+        <Label Grid.Row="1" Grid.Column="0" Margin="0,2" Content="Rotation" VerticalAlignment="Center" />
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="0,1" Text="0, 45, 0" />
+        <Label Grid.Row="2" Grid.Column="0" Margin="0,2" Content="Scale" VerticalAlignment="Center" />
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="0,1" Text="1, 1, 1" />
+      </Grid>
+    </Expander>
+
+    <Expander Header="Mesh Renderer" IsExpanded="True">
+      <Grid ColumnDefinitions="120,*" RowDefinitions="Auto,Auto,Auto">
+        <Label Grid.Row="0" Grid.Column="0" Margin="0,2" Content="Cast Shadows" VerticalAlignment="Center" />
+        <TextBox Grid.Row="0" Grid.Column="1" Margin="0,1" Text="On" />
+        <Label Grid.Row="1" Grid.Column="0" Margin="0,2" Content="Receive Shadows" VerticalAlignment="Center" />
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="0,1" Text="On" />
+        <Label Grid.Row="2" Grid.Column="0" Margin="0,2" Content="Material" VerticalAlignment="Center" />
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="0,1" Text="Standard" />
+      </Grid>
+    </Expander>
+
+    <Expander Header="Rigidbody">
+      <Grid ColumnDefinitions="120,*" RowDefinitions="Auto,Auto,Auto">
+        <Label Grid.Row="0" Grid.Column="0" Margin="0,2" Content="Mass" VerticalAlignment="Center" />
+        <TextBox Grid.Row="0" Grid.Column="1" Margin="0,1" Text="1" />
+        <Label Grid.Row="1" Grid.Column="0" Margin="0,2" Content="Drag" VerticalAlignment="Center" />
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="0,1" Text="0" />
+        <Label Grid.Row="2" Grid.Column="0" Margin="0,2" Content="Use Gravity" VerticalAlignment="Center" />
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="0,1" Text="True" />
+      </Grid>
+    </Expander>
+  </StackPanel>
+</UserControl>

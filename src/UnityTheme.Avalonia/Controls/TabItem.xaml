@@ -52,5 +52,18 @@
     <Style Selector="^[TabStripPlacement=Right]">
       <Setter Property="HorizontalContentAlignment" Value="Right" />
     </Style>
+    <Style Selector="^[TabStripPlacement=Left],
+                       ^[TabStripPlacement=Right]">
+      <Setter Property="Padding" Value="3,8" />
+    </Style>
+    <Style Selector="^[TabStripPlacement=Bottom]:selected /template/ ContentPresenter#PART_ContentPresenter">
+      <Setter Property="BorderThickness" Value="0,2,0,0" />
+    </Style>
+    <Style Selector="^[TabStripPlacement=Left]:selected /template/ ContentPresenter#PART_ContentPresenter">
+      <Setter Property="BorderThickness" Value="0,0,2,0" />
+    </Style>
+    <Style Selector="^[TabStripPlacement=Right]:selected /template/ ContentPresenter#PART_ContentPresenter">
+      <Setter Property="BorderThickness" Value="2,0,0,0" />
+    </Style>
   </ControlTheme>
 </ResourceDictionary>

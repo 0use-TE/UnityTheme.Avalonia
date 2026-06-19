@@ -1,0 +1,26 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="UnityTheme.Gallery.Views.ButtonsPage">
+  <StackPanel Spacing="12">
+    <StackPanel Spacing="6">
+      <Label Content="Standard" />
+      <StackPanel Orientation="Horizontal" Spacing="6">
+        <Button Content="Play" />
+        <Button Content="Pause" />
+        <Button Content="Step" />
+        <Button Classes="accent" Content="Accent" />
+        <Button Content="Disabled" IsEnabled="False" />
+      </StackPanel>
+    </StackPanel>
+
+    <StackPanel Spacing="6">
+      <Label Content="Toggle &amp; Split" />
+      <StackPanel Orientation="Horizontal" Spacing="6">
+        <ToggleButton Content="Wireframe" />
+        <ToggleButton Content="Gizmos" IsChecked="True" />
+        <SplitButton Content="Build" />
+        <DropDownButton Content="Layers" />
+      </StackPanel>
+    </StackPanel>
+  </StackPanel>
+</UserControl>
