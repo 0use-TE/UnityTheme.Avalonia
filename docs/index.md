@@ -1,6 +1,5 @@
 ---
 title: UnityTheme.Avalonia
-layout: default
 ---
 
 # UnityTheme.Avalonia

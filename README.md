@@ -118,6 +118,18 @@ dotnet build UnityTheme.Avalonia.slnx
 | Layout | Tabs, splitters, date/time pickers |
 | Inspector | Expander-based property panel demo |
 
+## GitHub Pages
+
+Documentation is deployed automatically with [GitHub Actions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow) on every push to `main`.
+
+**One-time setup** (no branch/folder selection):
+
+1. Open [Settings → Pages](https://github.com/0use-TE/UnityTheme.Avalonia/settings/pages)
+2. Under **Build and deployment → Source**, choose **GitHub Actions**
+3. Push to `main` — the `Deploy GitHub Pages` workflow builds and publishes `docs/`
+
+Site URL: **https://0use-te.github.io/UnityTheme.Avalonia/**
+
 ## Local Avalonia source (optional)
 
 If you keep a local clone of the [Avalonia repository](https://github.com/AvaloniaUI/Avalonia) for reference, place it in an `Avalonia/` folder next to the solution. **This folder is git-ignored** and is not part of the published package.
