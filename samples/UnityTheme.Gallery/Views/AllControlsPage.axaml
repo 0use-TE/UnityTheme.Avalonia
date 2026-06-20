@@ -24,8 +24,26 @@
       <StackPanel Spacing="6">
         <Label Content="SplitButton / DropDownButton" />
         <StackPanel Orientation="Horizontal" Spacing="6">
-          <SplitButton Content="Build" />
-          <DropDownButton Content="Layers" />
+          <SplitButton Content="Build">
+            <SplitButton.Flyout>
+              <MenuFlyout Placement="BottomEdgeAlignedLeft">
+                <MenuItem Header="Build And Run" InputGesture="Ctrl+B" />
+                <MenuItem Header="Build Settings" />
+                <MenuItem Header="-" />
+                <MenuItem Header="Clean Build" />
+              </MenuFlyout>
+            </SplitButton.Flyout>
+          </SplitButton>
+          <DropDownButton Content="Layers">
+            <DropDownButton.Flyout>
+              <MenuFlyout Placement="BottomEdgeAlignedLeft">
+                <MenuItem Header="Default" />
+                <MenuItem Header="TransparentFX" />
+                <MenuItem Header="UI" />
+                <MenuItem Header="Ignore Raycast" />
+              </MenuFlyout>
+            </DropDownButton.Flyout>
+          </DropDownButton>
         </StackPanel>
       </StackPanel>
 

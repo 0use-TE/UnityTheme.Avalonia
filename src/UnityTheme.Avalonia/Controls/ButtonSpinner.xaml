@@ -34,14 +34,20 @@
             <DockPanel>
               <UniformGrid Name="PART_SpinnerPanel"
                            TabIndex="2"
+                           Width="12"
+                           Height="18"
+                           VerticalAlignment="Center"
                            DockPanel.Dock="Right"
                            IsVisible="{TemplateBinding ShowButtonSpinner}"
                            Rows="2">
                 <RepeatButton Name="PART_IncreaseButton"
+                              MinHeight="9"
+                              MaxHeight="9"
+                              Padding="0"
                               IsTabStop="{TemplateBinding IsTabStop}"
                               Theme="{StaticResource SimpleButtonSpinnerRepeatButton}">
-                  <Path Width="8"
-                        Height="4"
+                  <Path Width="7"
+                        Height="3"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         Data="M0,5 L4.5,.5 9,5 6,5 4.5,3.5 3,5 z"
@@ -49,10 +55,13 @@
                         Stretch="Uniform" />
                 </RepeatButton>
                 <RepeatButton Name="PART_DecreaseButton"
+                              MinHeight="9"
+                              MaxHeight="9"
+                              Padding="0"
                               IsTabStop="{TemplateBinding IsTabStop}"
                               Theme="{StaticResource SimpleButtonSpinnerRepeatButton}">
-                  <Path Width="8"
-                        Height="4"
+                  <Path Width="7"
+                        Height="3"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         Data="M0,0 L3,0 4.5,1.5 6,0 9,0 4.5,4.5 z"

@@ -7,7 +7,14 @@
 
   <Design.PreviewWith>
     <Border Padding="20">
-      <SplitButton />
+      <SplitButton Content="Build">
+        <SplitButton.Flyout>
+          <MenuFlyout Placement="BottomEdgeAlignedLeft">
+            <MenuItem Header="Build And Run" InputGesture="Ctrl+B" />
+            <MenuItem Header="Build Settings" />
+          </MenuFlyout>
+        </SplitButton.Flyout>
+      </SplitButton>
     </Border>
   </Design.PreviewWith>
 
