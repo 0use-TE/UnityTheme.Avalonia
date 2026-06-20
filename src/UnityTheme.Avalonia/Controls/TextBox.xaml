@@ -188,7 +188,7 @@
       <Setter Property="BorderBrush" Value="{DynamicResource UnityBorderLightBrush}" />
     </Style>
     <Style Selector="^:focus /template/ Border#border">
-      <Setter Property="BorderBrush" Value="{DynamicResource HighlightBrush}" />
+      <Setter Property="BorderBrush" Value="{DynamicResource UnityBorderLightBrush}" />
     </Style>
     <Style Selector="^:error /template/ Border#border">
       <Setter Property="BorderBrush" Value="{DynamicResource ErrorBrush}" />

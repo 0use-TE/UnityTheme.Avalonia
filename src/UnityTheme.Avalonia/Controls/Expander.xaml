@@ -56,7 +56,8 @@
     <Setter Property="Template">
       <ControlTemplate>
         <Border Background="{TemplateBinding Background}"
-                BorderThickness="1">
+                BorderBrush="Transparent"
+                BorderThickness="0">
           <Grid ColumnDefinitions="Auto,*">
             <Border Grid.Column="0"
                     Width="20"

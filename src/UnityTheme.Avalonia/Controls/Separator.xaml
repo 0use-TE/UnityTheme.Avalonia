@@ -5,16 +5,19 @@
                 TargetType="Separator">
     <Setter Property="Focusable" Value="False" />
     <Setter Property="Background" Value="{DynamicResource UnityBorderBrush}" />
-    <Setter Property="Margin" Value="0,4" />
+    <Setter Property="Margin" Value="0" />
     <Setter Property="Height" Value="1" />
     <Setter Property="Template">
       <ControlTemplate>
         <Border Background="{TemplateBinding Background}"
                 BorderBrush="{TemplateBinding BorderBrush}"
                 BorderThickness="{TemplateBinding BorderThickness}"
-                CornerRadius="{TemplateBinding CornerRadius}" />
+                CornerRadius="0" />
       </ControlTemplate>
     </Setter>
+    <Style Selector="^:vertical">
+      <Setter Property="Width" Value="1" />
+      <Setter Property="Height" Value="NaN" />
+    </Style>
   </ControlTheme>
-
 </ResourceDictionary>

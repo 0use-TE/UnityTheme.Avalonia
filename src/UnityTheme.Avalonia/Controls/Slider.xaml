@@ -33,7 +33,7 @@
                     Margin="6,0"
                     VerticalAlignment="Center"
                     Background="{DynamicResource ThemeControlMidHighBrush}"
-                    CornerRadius="1" />
+                    CornerRadius="0" />
             <Track Name="PART_Track"
                    Grid.Row="1"
                    IsDirectionReversed="{TemplateBinding IsDirectionReversed}"
@@ -51,11 +51,10 @@
                      MinHeight="20">
                 <Thumb.Template>
                   <ControlTemplate>
-                    <Grid>
-                      <Ellipse Width="10"
-                               Height="10"
-                               Fill="{DynamicResource HighlightBrush}" />
-                    </Grid>
+                    <Border Width="8"
+                            Height="12"
+                            Background="{DynamicResource HighlightBrush}"
+                            CornerRadius="0" />
                   </ControlTemplate>
                 </Thumb.Template>
               </Thumb>
@@ -82,7 +81,7 @@
                     Margin="0,6"
                     HorizontalAlignment="Center"
                     Background="{DynamicResource ThemeControlMidHighBrush}"
-                    CornerRadius="1" />
+                    CornerRadius="0" />
             <Track Name="PART_Track"
                    Grid.Column="1"
                    IsDirectionReversed="{TemplateBinding IsDirectionReversed}"
@@ -100,11 +99,10 @@
                      MinHeight="20">
                 <Thumb.Template>
                   <ControlTemplate>
-                    <Grid>
-                      <Ellipse Width="10"
-                               Height="10"
-                               Fill="{DynamicResource HighlightBrush}" />
-                    </Grid>
+                    <Border Width="8"
+                            Height="12"
+                            Background="{DynamicResource HighlightBrush}"
+                            CornerRadius="0" />
                   </ControlTemplate>
                 </Thumb.Template>
               </Thumb>

@@ -3,10 +3,15 @@
                     x:ClassModifier="internal">
   <ControlTheme x:Key="{x:Type TabStrip}"
                 TargetType="TabStrip">
+    <Setter Property="Background" Value="{DynamicResource UnityPanelBackgroundBrush}" />
     <Setter Property="Template">
       <ControlTemplate>
-        <ItemsPresenter Name="PART_ItemsPresenter"
-                        ItemsPanel="{TemplateBinding ItemsPanel}" />
+        <Border Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}">
+          <ItemsPresenter Name="PART_ItemsPresenter"
+                          ItemsPanel="{TemplateBinding ItemsPanel}" />
+        </Border>
       </ControlTemplate>
     </Setter>
     <Setter Property="ItemsPanel">

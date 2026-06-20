@@ -6,7 +6,7 @@
     <Setter Property="Background" Value="{DynamicResource UnityPanelBackgroundBrush}" />
     <Setter Property="BorderBrush" Value="{DynamicResource UnityBorderBrush}" />
     <Setter Property="BorderThickness" Value="1" />
-    <Setter Property="CornerRadius" Value="{DynamicResource UnityControlCornerRadius}" />
+    <Setter Property="CornerRadius" Value="0" />
     <Setter Property="Padding" Value="0" />
     <Setter Property="Template">
       <ControlTemplate>
@@ -24,7 +24,7 @@
                     Background="{DynamicResource UnityBorderBrush}"
                     IsVisible="True" />
             <Border Name="PART_ContentBorder"
-                    Background="{DynamicResource ThemeControlMidBrush}"
+                    Background="{DynamicResource ThemeBackgroundBrush}"
                     ClipToBounds="True">
               <Grid>
                 <ContentPresenter Name="PART_SelectedContentHost2"
@@ -42,50 +42,52 @@
       </ControlTemplate>
     </Setter>
 
+    <Style Selector="^[TabStripPlacement=Top]">
+      <Setter Property="BorderThickness" Value="1,0,1,1" />
+    </Style>
     <Style Selector="^[TabStripPlacement=Top] /template/ ItemsPresenter#PART_ItemsPresenter">
       <Setter Property="DockPanel.Dock" Value="Top" />
-      <Setter Property="Margin" Value="0,4,0,0" />
     </Style>
-    <Style Selector="^[TabStripPlacement=Top] /template/ Border#PART_BorderSeparator">
-      <Setter Property="DockPanel.Dock" Value="Top" />
-      <Setter Property="Height" Value="1" />
-      <Setter Property="HorizontalAlignment" Value="Stretch" />
+    <Style Selector="^[TabStripPlacement=Top] /template/ ItemsPresenter#PART_ItemsPresenter > WrapPanel">
+      <Setter Property="VerticalAlignment" Value="Top" />
     </Style>
 
+    <Style Selector="^[TabStripPlacement=Bottom]">
+      <Setter Property="BorderThickness" Value="1,1,1,0" />
+    </Style>
     <Style Selector="^[TabStripPlacement=Bottom] /template/ ItemsPresenter#PART_ItemsPresenter">
       <Setter Property="DockPanel.Dock" Value="Bottom" />
-      <Setter Property="Margin" Value="0,0,0,4" />
     </Style>
-    <Style Selector="^[TabStripPlacement=Bottom] /template/ Border#PART_BorderSeparator">
-      <Setter Property="DockPanel.Dock" Value="Bottom" />
-      <Setter Property="Height" Value="1" />
-      <Setter Property="HorizontalAlignment" Value="Stretch" />
+    <Style Selector="^[TabStripPlacement=Bottom] /template/ ItemsPresenter#PART_ItemsPresenter > WrapPanel">
+      <Setter Property="VerticalAlignment" Value="Bottom" />
     </Style>
 
+    <Style Selector="^[TabStripPlacement=Left]">
+      <Setter Property="BorderThickness" Value="0,1,1,1" />
+      <Setter Property="ItemsPanel">
+        <ItemsPanelTemplate>
+          <StackPanel Orientation="Vertical" />
+        </ItemsPanelTemplate>
+      </Setter>
+    </Style>
     <Style Selector="^[TabStripPlacement=Left] /template/ ItemsPresenter#PART_ItemsPresenter">
       <Setter Property="DockPanel.Dock" Value="Left" />
-      <Setter Property="Margin" Value="4,0,0,0" />
-    </Style>
-    <Style Selector="^[TabStripPlacement=Left] /template/ ItemsPresenter#PART_ItemsPresenter > WrapPanel">
-      <Setter Property="Orientation" Value="Vertical" />
-    </Style>
-    <Style Selector="^[TabStripPlacement=Left] /template/ Border#PART_BorderSeparator">
-      <Setter Property="DockPanel.Dock" Value="Left" />
-      <Setter Property="Width" Value="1" />
-      <Setter Property="VerticalAlignment" Value="Stretch" />
     </Style>
 
+    <Style Selector="^[TabStripPlacement=Right]">
+      <Setter Property="BorderThickness" Value="1,1,0,1" />
+      <Setter Property="ItemsPanel">
+        <ItemsPanelTemplate>
+          <StackPanel Orientation="Vertical" />
+        </ItemsPanelTemplate>
+      </Setter>
+    </Style>
     <Style Selector="^[TabStripPlacement=Right] /template/ ItemsPresenter#PART_ItemsPresenter">
       <Setter Property="DockPanel.Dock" Value="Right" />
-      <Setter Property="Margin" Value="0,0,4,0" />
     </Style>
-    <Style Selector="^[TabStripPlacement=Right] /template/ ItemsPresenter#PART_ItemsPresenter > WrapPanel">
-      <Setter Property="Orientation" Value="Vertical" />
-    </Style>
-    <Style Selector="^[TabStripPlacement=Right] /template/ Border#PART_BorderSeparator">
-      <Setter Property="DockPanel.Dock" Value="Right" />
-      <Setter Property="Width" Value="1" />
-      <Setter Property="VerticalAlignment" Value="Stretch" />
+
+    <Style Selector="^ /template/ Border#PART_BorderSeparator">
+      <Setter Property="IsVisible" Value="False" />
     </Style>
   </ControlTheme>
 </ResourceDictionary>

@@ -92,15 +92,15 @@
     </Style>
 
     <Style Selector="^:selected /template/ Border#SelectionBorder:focus">
-      <Setter Property="Background" Value="{DynamicResource HighlightBrush2}" />
+      <Setter Property="Background" Value="{DynamicResource UnitySelectionBrush}" />
     </Style>
 
     <Style Selector="^:selected /template/ Border#SelectionBorder:pointerover">
-      <Setter Property="Background" Value="{DynamicResource HighlightBrush2}" />
+      <Setter Property="Background" Value="{DynamicResource UnitySelectionBrush}" />
     </Style>
 
     <Style Selector="^:selected /template/ Border#SelectionBorder:pointerover:focus">
-      <Setter Property="Background" Value="{DynamicResource HighlightBrush}" />
+      <Setter Property="Background" Value="{DynamicResource UnitySelectionBrush}" />
     </Style>
 
     <Style Selector="^:empty /template/ ToggleButton#PART_ExpandCollapseChevron">

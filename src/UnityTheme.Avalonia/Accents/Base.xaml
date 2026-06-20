@@ -163,8 +163,8 @@
   <sys:Double x:Key="FontSizeNormal">12</sys:Double>
   <sys:Double x:Key="FontSizeLarge">13</sys:Double>
 
-  <sys:Double x:Key="ScrollBarThickness">12</sys:Double>
-  <sys:Double x:Key="ScrollBarThumbThickness">6</sys:Double>
+  <sys:Double x:Key="ScrollBarThickness">8</sys:Double>
+  <sys:Double x:Key="ScrollBarThumbThickness">4</sys:Double>
 
   <sys:Double x:Key="IconElementThemeHeight">16</sys:Double>
   <sys:Double x:Key="IconElementThemeWidth">16</sys:Double>
@@ -179,7 +179,7 @@
   <CornerRadius x:Key="UnityControlCornerRadius">1</CornerRadius>
   <Thickness x:Key="UnityListItemPadding">4,2</Thickness>
   <sys:Double x:Key="UnitySliderTrackThickness">3</sys:Double>
-  <sys:Double x:Key="UnityProgressBarHeight">12</sys:Double>
+  <sys:Double x:Key="UnityProgressBarHeight">6</sys:Double>
 
   <!-- Compact date/time flyout -->
   <sys:Double x:Key="UnityDateTimeFlyoutItemHeight">22</sys:Double>

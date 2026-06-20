@@ -41,7 +41,7 @@
       <Setter Property="Background" Value="{DynamicResource UnityHoverBrush}" />
     </Style>
     <Style Selector="^:checked:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-      <Setter Property="Background" Value="{DynamicResource HighlightBrush2}" />
+      <Setter Property="Background" Value="{DynamicResource UnitySelectionBrush}" />
     </Style>
     <Style Selector="^:pressed  /template/ ContentPresenter#PART_ContentPresenter">
       <Setter Property="Background" Value="{DynamicResource ThemeControlHighBrush}" />

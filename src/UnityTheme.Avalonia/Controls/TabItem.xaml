@@ -7,7 +7,7 @@
     <Setter Property="FontSize" Value="{DynamicResource FontSizeNormal}" />
     <Setter Property="Foreground" Value="{DynamicResource ThemeForegroundLowBrush}" />
     <Setter Property="HorizontalContentAlignment" Value="Left" />
-    <Setter Property="Padding" Value="8,3" />
+    <Setter Property="Padding" Value="8,4" />
     <Setter Property="Template">
       <ControlTemplate>
         <ContentPresenter Name="PART_ContentPresenter"
@@ -35,35 +35,39 @@
       <Setter Property="Background" Value="{DynamicResource UnityHoverBrush}" />
     </Style>
     <Style Selector="^:selected /template/ ContentPresenter#PART_ContentPresenter">
-      <Setter Property="Background" Value="{DynamicResource ThemeControlMidHighBrush}" />
+      <Setter Property="Background" Value="{DynamicResource ThemeBackgroundBrush}" />
       <Setter Property="Foreground" Value="{DynamicResource ThemeForegroundBrush}" />
-      <Setter Property="BorderBrush" Value="{DynamicResource HighlightBrush}" />
-      <Setter Property="BorderThickness" Value="0,0,0,2" />
     </Style>
     <Style Selector="^:selected:focus /template/ ContentPresenter#PART_ContentPresenter">
-      <Setter Property="Background" Value="{DynamicResource ThemeControlMidHighBrush}" />
+      <Setter Property="Background" Value="{DynamicResource ThemeBackgroundBrush}" />
     </Style>
     <Style Selector="^:selected:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-      <Setter Property="Background" Value="{DynamicResource UnityHoverBrush}" />
+      <Setter Property="Background" Value="{DynamicResource ThemeBackgroundBrush}" />
     </Style>
     <Style Selector="^:selected:focus:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-      <Setter Property="Background" Value="{DynamicResource UnityHoverBrush}" />
+      <Setter Property="Background" Value="{DynamicResource ThemeBackgroundBrush}" />
+    </Style>
+    <Style Selector="^[TabStripPlacement=Top],
+                       ^[TabStripPlacement=Bottom]">
+      <Setter Property="VerticalAlignment" Value="Stretch" />
+      <Setter Property="VerticalContentAlignment" Value="Center" />
+    </Style>
+    <Style Selector="^[TabStripPlacement=Top] /template/ ContentPresenter#PART_ContentPresenter,
+                       ^[TabStripPlacement=Bottom] /template/ ContentPresenter#PART_ContentPresenter">
+      <Setter Property="VerticalAlignment" Value="Stretch" />
     </Style>
     <Style Selector="^[TabStripPlacement=Right]">
       <Setter Property="HorizontalContentAlignment" Value="Right" />
     </Style>
     <Style Selector="^[TabStripPlacement=Left],
                        ^[TabStripPlacement=Right]">
-      <Setter Property="Padding" Value="3,8" />
+      <Setter Property="Padding" Value="8,4" />
+      <Setter Property="HorizontalAlignment" Value="Stretch" />
+      <Setter Property="HorizontalContentAlignment" Value="Stretch" />
     </Style>
-    <Style Selector="^[TabStripPlacement=Bottom]:selected /template/ ContentPresenter#PART_ContentPresenter">
-      <Setter Property="BorderThickness" Value="0,2,0,0" />
-    </Style>
-    <Style Selector="^[TabStripPlacement=Left]:selected /template/ ContentPresenter#PART_ContentPresenter">
-      <Setter Property="BorderThickness" Value="0,0,2,0" />
-    </Style>
-    <Style Selector="^[TabStripPlacement=Right]:selected /template/ ContentPresenter#PART_ContentPresenter">
-      <Setter Property="BorderThickness" Value="2,0,0,0" />
+    <Style Selector="^[TabStripPlacement=Left] /template/ ContentPresenter#PART_ContentPresenter,
+                       ^[TabStripPlacement=Right] /template/ ContentPresenter#PART_ContentPresenter">
+      <Setter Property="HorizontalAlignment" Value="Stretch" />
     </Style>
   </ControlTheme>
 </ResourceDictionary>

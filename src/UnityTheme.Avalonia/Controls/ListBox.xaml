@@ -4,10 +4,10 @@
   <ControlTheme x:Key="{x:Type ListBox}"
                 TargetType="ListBox">
     <Setter Property="Background" Value="{DynamicResource UnityPanelBackgroundBrush}" />
-    <Setter Property="BorderBrush" Value="{DynamicResource UnityBorderBrush}" />
-    <Setter Property="BorderThickness" Value="{DynamicResource ThemeBorderThickness}" />
-    <Setter Property="Padding" Value="2" />
-    <Setter Property="CornerRadius" Value="{DynamicResource UnityControlCornerRadius}" />
+    <Setter Property="BorderBrush" Value="Transparent" />
+    <Setter Property="BorderThickness" Value="0" />
+    <Setter Property="Padding" Value="0" />
+    <Setter Property="CornerRadius" Value="0" />
     <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto" />
     <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
     <Setter Property="ScrollViewer.IsScrollChainingEnabled" Value="True" />

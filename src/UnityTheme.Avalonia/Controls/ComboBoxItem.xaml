@@ -31,15 +31,15 @@
       <Setter Property="TextElement.Foreground" Value="{DynamicResource HighlightForegroundBrush}" />
     </Style>
     <Style Selector="^:selected:focus /template/ ContentPresenter#PART_ContentPresenter">
-      <Setter Property="Background" Value="{DynamicResource HighlightBrush2}" />
+      <Setter Property="Background" Value="{DynamicResource UnitySelectionBrush}" />
       <Setter Property="TextElement.Foreground" Value="{DynamicResource HighlightForegroundBrush}" />
     </Style>
     <Style Selector="^:selected:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-      <Setter Property="Background" Value="{DynamicResource HighlightBrush2}" />
+      <Setter Property="Background" Value="{DynamicResource UnitySelectionBrush}" />
       <Setter Property="TextElement.Foreground" Value="{DynamicResource HighlightForegroundBrush}" />
     </Style>
     <Style Selector="^:selected:focus:pointerover /template/ ContentPresenter#PART_ContentPresenter">
-      <Setter Property="Background" Value="{DynamicResource HighlightBrush}" />
+      <Setter Property="Background" Value="{DynamicResource UnitySelectionBrush}" />
       <Setter Property="TextElement.Foreground" Value="{DynamicResource HighlightForegroundBrush}" />
     </Style>
   </ControlTheme>

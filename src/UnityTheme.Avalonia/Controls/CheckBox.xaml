@@ -4,13 +4,14 @@
   <ControlTheme x:Key="{x:Type CheckBox}"
                 TargetType="CheckBox">
     <Setter Property="Foreground" Value="{DynamicResource ThemeForegroundBrush}" />
-    <Setter Property="Background" Value="Transparent" />
-    <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderMidBrush}" />
+    <Setter Property="Background" Value="{DynamicResource UnityInputBackgroundBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource UnityBorderLightBrush}" />
     <Setter Property="BorderThickness" Value="{DynamicResource ThemeBorderThickness}" />
-    <Setter Property="Padding" Value="3,0,0,0" />
+    <Setter Property="Padding" Value="4,0,0,0" />
     <Setter Property="MinHeight" Value="18" />
     <Setter Property="VerticalContentAlignment" Value="Center" />
     <Setter Property="HorizontalContentAlignment" Value="Left" />
+    <Setter Property="CornerRadius" Value="0" />
     <Setter Property="Template">
       <ControlTemplate>
         <Grid ColumnDefinitions="Auto,*">
@@ -29,16 +30,15 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     Data="M 1145.607177734375,430 C1145.607177734375,430 1141.449951171875,435.0772705078125 1141.449951171875,435.0772705078125 1141.449951171875,435.0772705078125 1139.232177734375,433.0999755859375 1139.232177734375,433.0999755859375 1139.232177734375,433.0999755859375 1138,434.5538330078125 1138,434.5538330078125 1138,434.5538330078125 1141.482177734375,438 1141.482177734375,438 1141.482177734375,438 1141.96875,437.9375 1141.96875,437.9375 1141.96875,437.9375 1147,431.34619140625 1147,431.34619140625 1147,431.34619140625 1145.607177734375,430 1145.607177734375,430 z"
-                    Fill="{DynamicResource HighlightBrush}"
+                    Fill="{DynamicResource HighlightForegroundBrush}"
                     FlowDirection="LeftToRight"
                     Stretch="Uniform" />
               <Rectangle Name="indeterminateMark"
                          Width="8"
-                         Height="8"
+                         Height="2"
                          HorizontalAlignment="Center"
                          VerticalAlignment="Center"
-                         Fill="{DynamicResource HighlightBrush}"
-                         Stretch="Uniform" />
+                         Fill="{DynamicResource HighlightForegroundBrush}" />
             </Panel>
           </Border>
           <ContentPresenter Name="PART_ContentPresenter"
@@ -57,7 +57,7 @@
 
     <Style Selector="^ /template/ ContentPresenter#PART_ContentPresenter">
       <Setter Property="RecognizesAccessKey" Value="True" />
-    </Style> 
+    </Style>
 
     <Style Selector="^:pointerover /template/ Border#border">
       <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderHighBrush}" />
@@ -68,8 +68,16 @@
     <Style Selector="^ /template/ Rectangle#indeterminateMark">
       <Setter Property="IsVisible" Value="False" />
     </Style>
+    <Style Selector="^:checked /template/ Border#border">
+      <Setter Property="Background" Value="{DynamicResource HighlightBrush}" />
+      <Setter Property="BorderBrush" Value="{DynamicResource HighlightBrush}" />
+    </Style>
     <Style Selector="^:checked /template/ Path#checkMark">
       <Setter Property="IsVisible" Value="True" />
+    </Style>
+    <Style Selector="^:indeterminate /template/ Border#border">
+      <Setter Property="Background" Value="{DynamicResource HighlightBrush}" />
+      <Setter Property="BorderBrush" Value="{DynamicResource HighlightBrush}" />
     </Style>
     <Style Selector="^:indeterminate /template/ Rectangle#indeterminateMark">
       <Setter Property="IsVisible" Value="True" />

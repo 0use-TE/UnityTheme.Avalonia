@@ -163,7 +163,7 @@
         <Label Content="GridSplitter" />
         <Grid MaxWidth="360" Height="72" ColumnDefinitions="*,Auto,*">
           <TextBlock Grid.Column="0" Margin="6" VerticalAlignment="Center" Text="Left" />
-          <GridSplitter Grid.Column="1" Width="4" />
+          <GridSplitter Grid.Column="1" Width="4" ResizeDirection="Columns" />
           <TextBlock Grid.Column="2" Margin="6" VerticalAlignment="Center" Text="Right" />
         </Grid>
       </StackPanel>

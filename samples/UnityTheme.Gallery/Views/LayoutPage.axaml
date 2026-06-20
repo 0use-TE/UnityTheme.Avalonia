@@ -19,7 +19,10 @@
       <Label Content="GridSplitter" />
       <Grid Height="120" ColumnDefinitions="*,Auto,*">
         <TextBlock Grid.Column="0" Margin="8" VerticalAlignment="Top" Text="Hierarchy" />
-        <GridSplitter Grid.Column="1" Width="4" HorizontalAlignment="Stretch" />
+        <GridSplitter Grid.Column="1"
+                      Width="4"
+                      ResizeDirection="Columns"
+                      HorizontalAlignment="Stretch" />
         <TextBlock Grid.Column="2" Margin="8" VerticalAlignment="Top" Text="Inspector" />
       </Grid>
     </StackPanel>

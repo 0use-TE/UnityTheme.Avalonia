@@ -192,7 +192,7 @@
       <Setter Property="BorderBrush" Value="{DynamicResource UnityBorderLightBrush}" />
     </Style>
     <Style Selector="^:focus /template/ Button#PART_FlyoutButton">
-      <Setter Property="BorderBrush" Value="{DynamicResource HighlightBrush}" />
+      <Setter Property="BorderBrush" Value="{DynamicResource UnityBorderLightBrush}" />
     </Style>
 
     <Style Selector="^:hasnotime /template/ Button#PART_FlyoutButton TextBlock">

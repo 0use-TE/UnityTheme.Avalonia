@@ -20,7 +20,7 @@
                 TargetType="ProgressBar">
     <Setter Property="Background" Value="{DynamicResource ThemeControlMidHighBrush}" />
     <Setter Property="Foreground" Value="{DynamicResource HighlightBrush}" />
-    <Setter Property="CornerRadius" Value="{DynamicResource UnityControlCornerRadius}" />
+    <Setter Property="CornerRadius" Value="0" />
     <Setter Property="Template">
       <ControlTemplate TargetType="ProgressBar">
         <Grid>
